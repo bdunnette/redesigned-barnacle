@@ -1,0 +1,10 @@
+{
+  "public": {
+    "appName": "FGTCDB"
+  },
+
+  "github": {
+    "clientId": "fafe9d9fdba6c6a71053",
+    "secret": "e2a5e8dee3bdf4f02fa2280ee281fb7da31d4a06"
+  }
+}

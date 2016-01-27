@@ -11,12 +11,6 @@ Router.route('/', {
   where: 'client'
 });
 
-Router.route('volunteers', {
-  name: 'volunteers',
-  controller: 'VolunteersController',
-  where: 'client'
-});
-
 Router.route('product', {
   name: 'product',
   controller: 'ProductController',

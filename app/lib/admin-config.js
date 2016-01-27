@@ -1,6 +1,5 @@
 AdminConfig = {
   collections: {
-    Volunteers: {},
     Products: {}
   }
 };

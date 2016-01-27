@@ -1,5 +1,25 @@
 Products = new Mongo.Collection('products');
 
+ProductSchema = new SimpleSchema({
+  name: {
+    type: String
+  },
+  description: {
+    type: String,
+    optional: true
+  },
+  listPrice:{
+    type: Number,
+    decimal: true,
+    defaultValue: 1
+  },
+  taxable: {
+    type: Boolean,
+    defaultValue: true
+  }
+});
+
+Products.attachSchema(ProductSchema);
 
 if (Meteor.isServer) {
   Products.allow({

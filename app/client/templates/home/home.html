@@ -1,5 +1,17 @@
 <template name="Home">
   <div class="home">
-    <h1>Find me in app/client/templates/home/home</h1>
+    <p><input type="button" class="capture" value="Take Photo"></p>
+    <p><img src="{{photo}}"></p>
+    <button class="btn btn-success save-profile-photo">
+      <i class="fa fa-cloud-upload"></i>
+      Save Photo to Profile</button>
+    <div class="users row-fluid">
+      {{#each users}}
+        <div class="col-md-2">
+          <img src="{{userPhoto _id}}" alt="{{_id}}" />
+        </div>
+
+      {{/each}}
+    </div>
   </div>
 </template>

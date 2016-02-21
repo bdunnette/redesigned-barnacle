@@ -22,6 +22,7 @@ iron:router
 yogiben:admin
 dburles:collection-helpers
 aldeed:collection2
+aldeed:autoform
 accounts-base
 accounts-password
 alanning:roles
@@ -39,3 +40,6 @@ cfs:standard-packages
 cfs:gridfs
 cfs:ui
 cfs:graphicsmagick
+lbee:moment-helpers
+momentjs:moment
+aldeed:tabular

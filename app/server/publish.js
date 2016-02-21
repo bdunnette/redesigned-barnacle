@@ -1,7 +1,3 @@
-Meteor.publish('volunteers', function() {
-  return Volunteers.find();
-});
-
 Meteor.publish('product', function() {
   return Product.find();
 });
@@ -20,7 +16,6 @@ Meteor.publish('userData', function() {
       'profile': 1,
       'emails': 1,
       'roles': 1,
-      'profile': 1,
       'services.twitter.profile_image_url_https': 1,
       'services.facebook.id': 1,
       'services.google.picture': 1,
@@ -29,4 +24,13 @@ Meteor.publish('userData', function() {
       'services.linkedin.pictureUrl': 1
     }
   });
+});
+
+
+Meteor.publish('taxes', function () {
+  return Taxes.find();
+});
+
+Meteor.publish('transactions', function () {
+  return Transactions.find();
 });

@@ -22,3 +22,16 @@ Router.route('products', {
   controller: 'ProductsController',
   where: 'client'
 });
+
+
+Router.route('taxes', {
+  name: 'taxes',
+  controller: 'TaxesController',
+  where: 'client'
+});
+
+Router.route('transactions', {
+  name: 'transactions',
+  controller: 'TransactionsController',
+  where: 'client'
+});

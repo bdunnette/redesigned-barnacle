@@ -26,7 +26,7 @@
         <ul class="nav navbar-nav navbar-right">
           {{#if isInRole 'admin'}}
             <li>
-              <a href="/admin">
+              <a href="{{pathFor route='adminDashboard'}}">
                 <i class="fa fa-cogs"></i>
                 Admin
               </a>

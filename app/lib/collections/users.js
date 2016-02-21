@@ -48,7 +48,8 @@ UserSchema = new SimpleSchema({
     type: Date
   },
   profile: {
-    type: UserProfileSchema
+    type: UserProfileSchema,
+    optional: true
   },
   // Make sure this services field is in your schema if you're using any of the accounts packages
   services: {

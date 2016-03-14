@@ -11,7 +11,7 @@ TaxSchema = new SimpleSchema({
   amount:{
     type: Number,
     decimal: true,
-    defaultValue: 0.0775,
+    // defaultValue: 0.0775,
     // Ensure that tax percentage is greater than 0
     min: 0,
     exclusiveMin: true

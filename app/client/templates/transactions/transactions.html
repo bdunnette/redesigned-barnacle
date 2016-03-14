@@ -1,5 +1,11 @@
 <template name="Transactions">
   <div class="transactions">
-    <h1>Find me in app/client/templates/transactions/transactions</h1>
+    {{> quickForm collection="Transactions" id="insertTransactionForm" type="insert"}}
+    {{#each transactions}}
+    <p>{{date}} {{description}}</p>
+    {{/each}}
+    {{#each taxes}}
+    <p>{{startDate}} {{amount}}</p>
+    {{/each}}
   </div>
 </template>

@@ -35,11 +35,12 @@ ian:accounts-ui-bootstrap-3
 accounts-github
 utilities:avatar
 nimble:restivus
-fgtc:camera
-cfs:standard-packages
-cfs:gridfs
-cfs:ui
-cfs:graphicsmagick
+#fgtc:camera
+#cfs:standard-packages
+#cfs:gridfs
+#cfs:ui
+#cfs:graphicsmagick
 lbee:moment-helpers
 momentjs:moment
 aldeed:tabular
+aslagle:reactive-table

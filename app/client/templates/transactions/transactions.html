@@ -1,0 +1,10 @@
+<template name="Transactions">
+  <div class="transactions">
+    <h1>Recent Transactions:</h1>
+    {{#each transactions}}
+    <p>
+      <a href="{{pathFor route='transactionEdit' transactionId=_id}}">{{date}}</a>
+    </p>
+    {{/each}}
+  </div>
+</template>

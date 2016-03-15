@@ -1,0 +1,6 @@
+<template name="TransactionEdit">
+  <div class="transaction-edit">
+    <h1>Editing Transaction {{_id}}</h1>
+    {{> quickForm collection="Transactions" doc=transaction id="updateTransactionForm" type="update"}}
+  </div>
+</template>

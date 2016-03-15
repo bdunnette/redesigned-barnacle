@@ -1,10 +1,11 @@
 <template name="Transactions">
   <div class="transactions">
+    <h1>New Transaction: <button class="btn btn-success new-transaction">+</button></h1>
     <h1>Recent Transactions:</h1>
-    {{#each transactions}}
-    <p>
-      <a href="{{pathFor route='transactionEdit' transactionId=_id}}">{{date}}</a>
-    </p>
-    {{/each}}
+    {{> reactiveTable settings=tableSettings}}
   </div>
+</template>
+
+<template name="transactionDate">
+  <a href="{{pathFor route='transactionEdit' transactionId=_id}}">{{date}}</a>
 </template>

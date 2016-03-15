@@ -18,3 +18,8 @@ Meteor.publish('transaction', function (transactionId) {
 Meteor.publish('people', function () {
   return People.find();
 });
+
+
+Meteor.publish('attendances', function () {
+  return Attendances.find();
+});

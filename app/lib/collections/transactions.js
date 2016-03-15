@@ -5,8 +5,9 @@ TransactionSchema = new SimpleSchema({
     type: Date,
     defaultValue: new Date()
   },
-  customer: {
+  customerId: {
     type: String,
+    optional: true,
     autoform: {
       options: function() {
         return People.find().map(function(person) {
@@ -26,31 +27,37 @@ TransactionSchema = new SimpleSchema({
 
 Transactions.attachSchema(TransactionSchema);
 
+Transactions.helpers({
+  customer() {
+    return People.findOne(this.customerId);
+  }
+});
+
 if (Meteor.isServer) {
   Transactions.allow({
-    insert: function (userId, doc) {
+    insert: function(userId, doc) {
       return true;
     },
 
-    update: function (userId, doc, fieldNames, modifier) {
+    update: function(userId, doc, fieldNames, modifier) {
       return true;
     },
 
-    remove: function (userId, doc) {
+    remove: function(userId, doc) {
       return true;
     }
   });
 
   Transactions.deny({
-    insert: function (userId, doc) {
+    insert: function(userId, doc) {
       return false;
     },
 
-    update: function (userId, doc, fieldNames, modifier) {
+    update: function(userId, doc, fieldNames, modifier) {
       return false;
     },
 
-    remove: function (userId, doc) {
+    remove: function(userId, doc) {
       return false;
     }
   });
